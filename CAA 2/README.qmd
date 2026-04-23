@@ -1,0 +1,94 @@
+---
+title: "Challenge 2. Protecting the network"
+subtitle: "Security in Computer Networks"
+author: Alejandro Pérez Bueno
+bibliography: references.bib
+date: today
+date-format: "MMM DD, YYYY"
+toc: true
+toc-title: "Table of Contents"
+linkcolor: blue
+documentclass: report
+link-citations: true
+link-bibliography: true
+format:
+  gfm: default
+  pdf:
+    linestretch: 1.25
+    geometry:
+      - top=30mm
+      - left=20mm
+      - heightrounded
+    fontsize: 12pt
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+          \pagestyle{fancy}
+          \fancyhead[C]{UOC}
+          \fancyhead[R]{aperez-b@uoc.edu}
+          \fancyfoot{}
+          \fancyfoot[C]{\thepage}
+---
+
+{{< pagebreak >}}
+
+## Activity 1
+
+### 1.1
+
+Next gen firewalls (NGFWs) surpass the application-layer gateways of third-generation firewalls in perimeter security. They add network intrusion prevention, malware filtering, active directory integration and encrypted traffic inspection (TLS/SSH). In this last process NGFWs decrypt communications, analyze contents and re-encrypt them to detect attacks [@garciaalfaro2023].
+
+### 1.2
+
+#### a)
+
+A third-generation firewall or a NGFW is the most appropriate choice, as theses systems behave as application-level gateways. The firewall acts as a proxy that terminates external connections before they reach the internal network and inspects the data to forward approved traffic. AS a result, vendors cannot establish direct connections to internal assets [@garciaalfaro2023].
+
+#### b)
+
+Opening the business environment introduces risks associated with encrypted traffic: attackers ofnten use encryption to bypass standard filters and hide malware or unauthorized network intrusions. Organizations mitigate this by deploying NGFWs, which decrypt and inspect traffic to identify payloads that would otherwise remain hidden within the communication channel [@garciaalfaro2023].
+
+### 1.3
+
+#### a)
+
+I would install a third-generation firewall as an application-level gateway or proxy server. This setup separates the corporate network from outside traffic at the application layer. Instead of routing traffic the firewall acts as a proxy, inspecting and relaying marketplace data thus keeping network assets isolated [@garciaalfaro2023].
+
+#### b)
+
+A vendor marketplace introduces application-layer threats. For instance we could get evasion attacks where payloads are hidden within application data or encrypted communications to bypass inspection. Because proxy servers require processing power for data inspection the network becomes vunlerable to app-layer DoS attacks designed to saturate the gateway [@garciaalfaro2023]. Opening the marketplace also brings risks that filtering cannot stop, suchas SQL injection, cross-site scripting and breaches from compromised vendor credentials [@awasp2025] [@zdnet2015].
+
+## Activity 2
+
+### 2.1
+
+Anomaly-based intrusion detection systems tend to generate false positives. This happens because detection relies on comparing current activity with a standard behavior. whenerver there is a deviation beyond a threshold an alret is triggered. The problem is that unusual activity is not always an attack, for instance network updates or shifts in user habits could cause false alarms though they are not such [@garciaalfaro2023ids].
+
+The module recommends three approaches to lower false positive rates:
+
+1. Adaptive Profiling: Systems should avoid fixed baselines and be more dynamic: an initial profile can evolve overtime with user or service habits [@garciaalfaro2023ids].
+2. Statistical Descriptors: Mathematical models evaluate behavioral shifts allowing the IDS to recognize permitted changes and integrate them into the profile without generating repeated alerts [@garciaalfaro2023ids].
+3. AI and Machine Learning: Machine learning algorithms automate profile adaptation, because they classify data patterns to separate harmless anomalies from actual security threats [@garciaalfaro2023ids; @seng2021].
+
+### 2.2
+
+In an anomaly-based intrusion detection system the learning phase establishes a behavioral baseline through the following steps.
+
+The system starts with an initial profile to define normal activity for users or services. It adapts this profile based on observed behavior using heuristics, statistical descriptors and AI, including machine learning with neural networks to update the profile [@garciaalfaro2023ids].
+
+Data analysis uses a storage hierarchy in which short term analysis keeps data in internal buffers, medium term storage holds pre-processed data for two or three days for review and long term storage compressess data for months or years to detect extended attacks [@garciaalfaro2023ids].
+
+With a SIEM platform the system processes events through collection and normalisation, aggregation and fusion, alert correlation and report generation [@garciaalfaro2023ids].
+
+{{< pagebreak >}}
+
+## Final Reflection
+
+This activity has shed light on challenges in anomaly-based intrusion detection systems I wasn't aware of. Networks evolve, so having rigid baselines can generate false positives and alerts. Security depends on adaptation through machine learning and ongoing profiling, to help systems separate routine changes from threats. The result of these implementarions is a defense that updates over time.
+
+{{< pagebreak >}}
+
+## References
+
+::: {#refs}
+:::
