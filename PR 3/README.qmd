@@ -1,0 +1,69 @@
+---
+title: "PR 3: Screenshots of the solutions"
+subtitle: "Security in Computer Networks"
+author: "Alejandro Pérez Bueno"
+date: "today"
+date-format: "MMM DD, YYYY"
+toc: true
+toc-title: "Table of Contents"
+linkcolor: "blue"
+documentclass: report
+link-citations: true
+link-bibliography: true
+format:
+  gfm: default
+  pdf:
+    linestretch: 1.25
+    geometry:
+      - top=30mm
+      - left=20mm
+      - heightrounded
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+          \pagestyle{fancy}
+          \fancyhead[C]{UOC}
+          \fancyhead[R]{aperez-b@uoc.edu}
+          \fancyfoot{}
+          \fancyfoot[C]{\thepage}
+---
+
+{{< pagebreak >}}
+
+:::{.callout-note}
+
+Below are screenshots demonstrating the command results for tasks requiring them.
+
+:::
+
+## Task 2
+
+![Task 2 commands](img/task2.png)
+
+{{< pagebreak >}}
+
+## Task 3
+
+![Task 3 commands](img/task3.png)
+
+{{< pagebreak >}}
+
+## Task 4
+
+![Task 4 commands](img/task4.png)
+
+![Task 4 commands](img/task4b.png)
+
+{{< pagebreak >}}
+
+## Task 5
+
+![Task 5 commands](img/task5a.png)
+
+![Task 5 commands](img/task5.png)
+
+{{< pagebreak >}}
+
+## Task 6
+
+![Task 6 commands](img/task6.png)
